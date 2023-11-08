@@ -1,0 +1,19 @@
+{
+    "id": "dbu",
+    "title": "Dragon Ball Universe",
+    "description": "A module which allows connection of bluetooth adult toys to foundry",
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": 11,
+        "verified": 11,
+        "maximum": 11
+    },
+    "authors": ["PrismaArchives"],
+    "esmodules" : [
+        "dbu.js"
+    ], 
+    "styles": [
+        "styles/actor.css"
+    ]
+    
+}

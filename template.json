@@ -1,0 +1,77 @@
+{
+    "Actor": {
+        "types": ["character", "minion"],
+        "templates": {
+            "z-soul": {
+                "description": "",
+                "alignment": 0,
+                "karma": 5
+            },
+            "attributes": {
+                "agility": 1,
+                "force": 1,
+                "tenacity": 1,
+                "scholarship": 1,
+                "insight": 1,
+                "magic": 1,
+                "personality": 1
+            },
+            "race": {
+                "name": "",
+                "attribute_1": "",
+                "attribute_2": "",
+                "attribute_3": "",
+                "life_mod": 0,
+                "saving_throw": "",
+                "skill_rank": 0
+            },
+            "health": {
+                "threshold": "healthy"
+            },
+            "ki": {
+                "value": 50,
+                "max_capacity": 20 
+            },
+            "capacity": {
+                "haste": 0,
+                "might": 0
+            },
+            "level": {
+                "value": 1
+            }
+        },
+        "character": {
+            "templates":["z-soul", "attributes","race", "health"]
+        }
+    },
+    "Item": {
+        "types":["gear", "technique", "transformation"],
+        "templates": {
+            "gear_common": {
+                "integrated": {
+                    "value": "False"
+                }
+            },
+            "grade": {
+                "grade": "low"
+            },
+            "stacks": {
+                "value": 1,
+                "max": 1
+            },
+            "requirement": {
+                "racial": null,
+                "tier":null
+            }
+
+
+
+        },
+
+        "gear": {
+            "templates": []
+        }
+
+
+    }
+}
