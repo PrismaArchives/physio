@@ -10,7 +10,7 @@
     },
     "authors": ["PrismaArchives"],
     "esmodules" : [
-        "dbu.js"
+        "dbu.mjs"
     ], 
     "styles": [
         "styles/actor.css"

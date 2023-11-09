@@ -2,9 +2,11 @@
     "Actor": {
         "types": ["character", "minion"],
         "templates": {
+            "alignment": {
+                "alignment": 0
+            },
             "z-soul": {
                 "description": "",
-                "alignment": 0,
                 "karma": 5
             },
             "attributes": {
@@ -25,8 +27,9 @@
                 "saving_throw": "",
                 "skill_rank": 0
             },
-            "health": {
-                "threshold": "healthy"
+            "life-points": {
+                "value": 60,
+                "max": 60
             },
             "ki": {
                 "value": 50,
@@ -41,9 +44,13 @@
             }
         },
         "character": {
-            "templates":["z-soul", "attributes","race", "health"]
+            "templates":["alignment","z-soul", "attributes","race", "life-points"]
+        },
+        "minion": {
+            "templates":["alignment","attributes","race","life-points"]
         }
     },
+
     "Item": {
         "types":["gear", "technique", "transformation"],
         "templates": {
