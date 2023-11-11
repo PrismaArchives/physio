@@ -1,56 +1,64 @@
-<div class="flexrow groove-bordered rm-top-border rm-left-border rm-right-border">
-    <img class="profile-img min-size groove-bordered rm-top-border rm-left-border rm-bottom-border" src="icons/svg/mystery-man.svg" data-edit="img" title="{{data.name}}">
-    <div class="flexcol">
-        <div class="flexrow">
-            <input type="text" class="name" placeholder="Name" id="name-input">
-            <div class="flexcol min-size slow-grow">
-                <label>Power Level:</label>
-                {{numberInput value name="power_level" min=0 max=30 step=1}}
-            </div>
-            <div class="flexcol min-size slow-grow">
-                <label>Race:</label>
-                <select name="attr_race">
-                    <option value="none">Select Race:</option>
-                    <option value="android">Android</option>
-                    <option value="arcosian">Arcosian</option>
-                    <option value="human">Earthling</option>
-                    <option value="namekians">Namekian</option>
-                    <option value="majin">Majin</option>
-                    <option value="saiyan">Saiyan</option>
-                    <option value="shinjin">Shinjin</option>
-                </select>
+       
+       
+        <div class="flexrow groove-bordered rm-top-border rm-left-border rm-right-border">
+            <img class="profile-img min-size groove-bordered rm-top-border rm-left-border rm-bottom-border" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+            <div class="flexcol">
+                <div class="flexrow">
+                    <input type="text" name="name" value="{{actor.name}}" class="name" placeholder="Name" id="name-input">
+                    <div class="flexcol min-size slow-grow">
+                        <label>Power Level:</label>
+                        <input name="system.power_level" type="text" value = "{{actor.system.power_level}}" data-dtype="Number"/>
+                    </div>
+                    <div class="flexcol min-size slow-grow">
+                        <label>Race:</label>
+                        <select name="attr_race">
+
+                            {{#select actor.system.race}}
+                            {{#each config.races as |name type|}}
+                            <option value="{{type}}">{{name}}</option>
+                            {{/each}}
+                            {{/select}}
+
+                        </select>
+
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="flexrow bio-div">
+                    <div class="flexcol min-size slow-grow">
+                        <label>Karma:</label>
+                        <input name="system.karma" type="text" value = "{{actor.system.karma}}" data-dtype="Number"/>
+                    </div>
+                    <div class="flexcol min-size ">
+                        <label>Alignment:</label>
+                        <select name="system.alignment" value ="{{actor.system.alignment}}">
+                            {{#select actor.system.alignment}}
+                            {{#each config.alignments as |name type|}}
+                            <option value="{{type}}">{{name}}</option>
+                            {{/each}}
+                            {{/select}}
+                            
+                        </select>
+                    </div>
+                    <div class="flexcol min-size">
+                        <label>Size:</label>
+                        <select name="system.size" value="{{actor.system.size}}">
+                            {{#select actor.system.size}}
+                            {{#each config.sizes as |name type|}}
+                            <option value="{{type}}">{{name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="flexcol min-size slow-grow">
+                        <label>Subrace:</label>
+                        <input type="text" name="system.subrace" value="{{actor.system.subrace}}">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="flexrow bio-div">
-            <div class="flexcol min-size slow-grow">
-                <label>Karma:</label>
-                {{numberInput value name="karma" min=0 max=10 step=1}}
-            </div>
-            <div class="flexcol min-size ">
-                <label>Alignment:</label>
-                <select name="alignment">
-                    <option value="none">Select Alignment:</option>
-                    <option value="pure-good">Pure Good</option>
-                    <option value="good">Good</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="evil">Evil</option>
-                    <option value="pure-evil">Pure Evil</option>
-                </select>
-            </div>
-            <div class="flexcol min-size">
-                <label>Size:</label>
-                <select name="size">
-                    <option value="none">Select Size:</option>
-                    <option value="large">Large</option>
-                    <option value="medium">Medium</option>
-                    <option value="small">Small</option>
-                </select>
-            </div>
-            <div class="flexcol min-size slow-grow">
-                <label>Subrace:</label>
-                <input type="text" name="subrace" class="subrace">
-            </div>
-        </div>
-    </div>
-</div>

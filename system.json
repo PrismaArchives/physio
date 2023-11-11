@@ -14,6 +14,16 @@
     ], 
     "styles": [
         "styles/actor.css"
-    ]
+    ],
+    "language": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "primaryTokenAttribute": "resources.hp",
+    "secondaryTokenAttribute": "resources.ki"
+
     
 }

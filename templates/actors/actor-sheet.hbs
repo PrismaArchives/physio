@@ -1,55 +1,23 @@
-<form class="flexcol {{cssClass}}" autocomplete="off">
-    <header>
-        <div class="heading-class"> 
-            {{> "systems/DBU/templates/actors/partials/character-header-partial.hbs"}}
-            </div>
-             <nav class="tabs" data-group="primary-tabs" >
-                <a class="item" data-tab="tab1" data-group="primary-tabs">Core</a>
-                <a class="item" data-tab="tab2" data-group="primary-tabs">Items</a>
-                <a class="item" data-tab="tab3" data-group="primary-tabs">Techniques</a>
-                <a class="item" data-tab="tab4" data-group="primary-tabs">Transformations</a>
-                <a class="item" data-tab="tab5" data-group="primary-tabs">Biography</a>
-            </nav>
-        </div>
+<form class="flexcol {{cssClass}} sheet-form" autocomplete="off">
+    <header class="heading-class">
+        {{> "systems/DBU/templates/actors/partials/character-header-partial.hbs"}}
+        <nav class="tabs" data-group="primary-tabs" >
+            <a class="item" data-tab="tab1" data-group="primary-tabs">Core</a>
+            <a class="item" data-tab="tab2" data-group="primary-tabs">Items</a>
+            <a class="item" data-tab="tab3" data-group="primary-tabs">Techniques</a>
+            <a class="item" data-tab="tab4" data-group="primary-tabs">Transformations</a>
+            <a class="item" data-tab="tab5" data-group="primary-tabs">Biography</a>
+        </nav>
     </header>
    
 
-    <section class="content">
+    <section class="content groove-bordered">
     <div class="tab flexrow" data-tab="tab1" data-group="primary-tabs">
-        <div name="attribute-section" class="flexcol groove-bordered" id="attributes-section">
-            <label><h2>Attributes</h2> </label>
-            <div>
-                <label>Agility</label>
-                
-            </div>
-            <div>
-                <label>Force</label>
+        {{> "systems/DBU/templates/actors/partials/attribute-partial.hbs"}}
+        {{> "systems/DBU/templates/actors/partials/skills-partial.hbs"}}
+        
 
-            </div>
-            <div>
-                <label>Tenacity</label>
-
-            </div>
-            <div>
-                <label>Scholarship</label>
-
-            </div>
-            <div>
-                <label>Insight</label>
-
-            </div>
-            <div>
-                <label>Magic</label>
-
-            </div>
-            <div>
-                <label>Personality</label>
-
-            </div>
-        </div>
-        <div>
-            <label>Skills:</label>
-        </div>
+        
 
     </div>
 
@@ -67,7 +35,7 @@
         <p>Transformations</p>
     </div>
 
-    <div class="tab flexrow" id ="device-tab" data-tab="tab5" data-group="primary-tabs">
+    <div class="tab flexcol" id ="device-tab" data-tab="tab5" data-group="primary-tabs">
         <label class="min-size">
             Hair Color:
             <input type="text" class="hair-color">
@@ -76,7 +44,12 @@
             Eye Color:
             <input type="text" class="eye-color">
         </label>
-        <label class="min-size">
+        
+
+
+
+
+
     </div>
 
 

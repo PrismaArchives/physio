@@ -14,14 +14,9 @@ export class DBUActorSheet extends ActorSheet {
         return mergeObject(defaults, overrides);
     }
 
-    
-
-    async getData(options) {
-        const context = {
-            actor: this.actor,
-
-
-        }
+    async getData() {
+        const context = super.getData()
+        context.config = CONFIG.dbu;
 
         return context;
     }

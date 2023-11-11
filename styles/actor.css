@@ -21,25 +21,39 @@
     flex-grow: 0;
 }
 
+
 .min-size {
     flex-shrink: 1;
     flex-basis: auto;
 
 }
 
+h4 {
+    border: groove;
+    border-color: white; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
 .slow-grow {
     flex-grow: 0.1;
 }
 
-.content {
-    align-self: start;
+.attribute-square {
+    text-align: center;
+    width: 80px;
+    height: 80px !important;
 }
 
 .heading-class{
-    height: 100px;
+    height: 120px;
     width: 100%;
-    
+    flex-grow: 0;
+    padding-bottom: 20px;
 }
+
 
 .heading-class select {
     height: 50px;
@@ -71,6 +85,15 @@
 #name-input {
     flex-basis: 2;
     height: 100%;
+    
+}
+
+.content {
+    align-self: stretch;
+
+}
+
+.sheet-form {
     
 }
 
