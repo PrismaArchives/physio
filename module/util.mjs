@@ -9,3 +9,12 @@ export async function preloadHandlebarsTemplates() {
 
     return loadTemplates(templatePaths);
 }
+
+export async function registerHelpers() {
+    //just use {{#if (eq arg1 arg2)}}
+    /*
+    Handlebars.registerHelper('ifEquals', function(arg1, arg2, options){
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    });
+    */
+}

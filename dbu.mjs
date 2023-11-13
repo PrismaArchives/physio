@@ -1,5 +1,5 @@
 import { DBUActorSheet } from './module/actor/sheet/actor-sheet.mjs';
-import { preloadHandlebarsTemplates } from './module/util.mjs';
+import { preloadHandlebarsTemplates, registerHelpers } from './module/util.mjs';
 import { dbu } from './module/config.mjs';
 
 
@@ -14,10 +14,11 @@ Hooks.on("init", function() {
 
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("dbu", DBUActorSheet, {
-    types: ["character"],
+    //types: ["character"],
     makeDefault: true
   });
   
   preloadHandlebarsTemplates();
+  registerHelpers();
 });
 

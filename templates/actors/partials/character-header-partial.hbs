@@ -29,10 +29,13 @@
                 </div>
 
                 <div class="flexrow bio-div">
+                    {{#if (eq actor.type 'character')}}
                     <div class="flexcol min-size slow-grow">
+                        
                         <label>Karma:</label>
                         <input name="system.karma" type="text" value = "{{actor.system.karma}}" data-dtype="Number"/>
                     </div>
+                    {{/if}}
                     <div class="flexcol min-size ">
                         <label>Alignment:</label>
                         <select name="system.alignment" value ="{{actor.system.alignment}}">

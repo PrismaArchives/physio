@@ -21,6 +21,9 @@
     flex-grow: 0;
 }
 
+.img {
+    flex-grow: 0;
+}
 
 .min-size {
     flex-shrink: 1;

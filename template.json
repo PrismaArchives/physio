@@ -87,7 +87,14 @@
         },
 
         "technique": {
-
+            "name": "",
+            "type": "",
+            "foundation": "",
+            "tp": 0,
+            "ki": 0,
+            "description": "",
+            "advantages": [],
+            "disadvantages": []
         },
 
         "transformation": {
@@ -95,6 +102,7 @@
             "category": "",
             "tier_requirement": 0, 
             "racial_requirement": "None"
+            
         }
 
 
