@@ -28,11 +28,10 @@ export class DBUActorSheet extends ActorSheet {
         super.activateListeners(html);
         
         var event_data = {
-            actor: this.actor,
+            actor: game.actors.get(this.actor._id),
 
         }
         
-
         html
         .on('submit', event_data, async function(event) {
             var actor = event.data.actor;
@@ -40,7 +39,9 @@ export class DBUActorSheet extends ActorSheet {
             console.log(actor.items);
             if(($(activeEl)).hasClass('delete')) {
                 var id = $(activeEl).attr('id');
-                actor.items.delete(id);
+                //items.delete() seems to delete on client side remember to use items.find.delete to delete the item itself.
+                console.log(actor.items.find(item => item._id == id));
+                actor.items.find(item => item._id == id).delete();
                 $("." + id).remove();
             }
             console.log(actor.items);
