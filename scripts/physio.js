@@ -1,5 +1,4 @@
-import { DBUActorSheet } from './module/actor/sheet/actor-sheet.js';
-
+import { PhysioActorSheet } from '../module/actor/sheet/actor-sheet.js';
 
 
 
@@ -9,9 +8,10 @@ Hooks.on();
 
 Hooks.on("init", function() {
   console.log("DBU START");
+  registerSettings();
 
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("dbu", DBUActorSheet, {makeDefault: true});
+  Actors.registerSheet("physio", PhysioActorSheet, {makeDefault: true});
   
 });
 

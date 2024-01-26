@@ -1,11 +1,11 @@
 <form id="sheetForm" class="flexcol {{cssClass}} sheet-form" autocomplete="off">
     <header class="heading-class">
-        {{> "systems/DBU/templates/actors/partials/character-header-partial.hbs"}}
+        {{> "systems/physio/templates/actors/partials/character-header-partial.hbs"}}
         <nav class="tabs" data-group="primary-tabs" >
             <a class="item" data-tab="tab1" data-group="primary-tabs">Core</a>
             <a class="item" data-tab="tab2" data-group="primary-tabs">Items</a>
-            <a class="item" data-tab="tab3" data-group="primary-tabs">Techniques</a>
-            <a class="item" data-tab="tab4" data-group="primary-tabs">Transformations</a>
+            <a class="item" data-tab="tab3" data-group="primary-tabs">Magic</a>
+            <a class="item" data-tab="tab4" data-group="primary-tabs">Body</a>
             <a class="item" data-tab="tab5" data-group="primary-tabs">Biography</a>
         </nav>
     </header>
@@ -13,8 +13,11 @@
 
     <section class="content groove-bordered">
     <div class="tab flexrow" data-tab="tab1" data-group="primary-tabs">
-        {{> "systems/DBU/templates/actors/partials/attribute-partial.hbs"}}
-        {{> "systems/DBU/templates/actors/partials/skills-partial.hbs"}}
+        {{> "systems/physio/templates/actors/partials/attribute-partial.hbs"}}
+        <div></div>
+        <div></div>
+        <div></div>
+        {{> "systems/physio/templates/actors/partials/skills-partial.hbs"}}
         
 
         
@@ -26,23 +29,29 @@
     <div class="tab flexcol" id ="device-tab" data-tab="tab2" data-group="primary-tabs">
         <p>Items</p>
         <div class="flexrow">
-            {{#each actor.items}}
-            <div class="{{this._id}}">
-                <input type="checkbox" id="{{concat this._id "_checkbox"}}">
-                <p>{{this.name}}</p>
-                <input type="image" src="systems/dbu/png/star-ball-5.png" class = "delete img" id="{{this._id}}" width="20" height="20">
-            </div>
+            {{#each gear_list as |gear|}}
+                {{>"systems/physio/templates/actors/partials/item-partial.hbs" gear}}
             {{/each}}
         </div>
         
     </div>
 
-    <div class="tab flexrow" id ="device-tab" data-tab="tab3" data-group="primary-tabs">
+    <div class="tab flexcol" id ="device-tab" data-tab="tab3" data-group="primary-tabs">
         <p>Techniques</p>
+        <div class="flexrow">
+            {{#each techniques as |technique|}}
+                {{>"systems/physio/templates/actors/partials/item-partial.hbs" technique}}
+            {{/each}}
+        </div>
     </div>
 
-    <div class="tab flexrow" id ="device-tab" data-tab="tab4" data-group="primary-tabs">
-        <p>Transformations</p>
+    <div class="tab flexcol" id ="device-tab" data-tab="tab4" data-group="primary-tabs">
+        <p>Body</p>
+        <div class="flexrow">
+            {{#each body_parts as |body_part|}}
+                {{>"systems/physio/templates/actors/partials/item-partial.hbs" body_part}}
+            {{/each}}
+        </div>
     </div>
 
     <div class="tab flexcol" id ="device-tab" data-tab="tab5" data-group="primary-tabs">

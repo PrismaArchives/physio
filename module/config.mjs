@@ -1,37 +1,32 @@
-export const dbu = {};
+export const physio = {};
 
 //make this based off of lang file...
 
-dbu.alignments = {
-    puregood: "Pure Good",
-    good: "Good",
-    neutral: "Neutral",
-    evil: "Evil",
-    pureevil: "Pure Evil"
+physio.attributes = {
+    "strength": "Strength",
+    "agility": "Agility",
+    "endurance": "Endurance",
+    "mind": "Mind",
+    "magic": "Magic",
+    "luck": "Luck"
 }
 
-dbu.sizes = {
+physio.sizes = {
     large: "Large",
     medium: "Medium",
     small: "Small"
 }
 
-dbu.transformation_categories = {
-    manifested: "Manifested",
-    enhancement: "Enhancement",
-    alternate: "Alternate",
-    legendary: "Legendary"
+
+physio.species = {
+    human: "Human",
 }
 
-
-dbu.races = {
-
-    android:"Android",
-    arcosian: "Arcosian",
-    human: "Earthling",
-    namekians: "Namekian",
-    majin: "Majin",
-    saiyan: "Saiyan",
-    shinjin: "Shinjin",
-    custom: "Custom"
+physio.parts = {
+    head: "Head",
+    brain: "Brain",
+    eye: "Eye",
+    arm: "Arm",
+    leg: "Leg",
+    torso: "Torso"
 }

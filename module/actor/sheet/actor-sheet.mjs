@@ -1,9 +1,9 @@
-export class DBUActorSheet extends ActorSheet {
+export class PhysioActorSheet extends ActorSheet {
     
     static get defaultOptions() {
         const defaults = super.defaultOptions;
         const overrides = {
-            template: "systems/DBU/templates/actors/actor-sheet.hbs",
+            template: "systems/physio/templates/actors/actor-sheet.hbs",
             tabs: [{ navSelector: ".tabs", contentSelector: ".content", initial: "tab1" }],
             width: 900
     
@@ -15,10 +15,9 @@ export class DBUActorSheet extends ActorSheet {
 
     async getData() {
         const context = super.getData();
-        context.config = CONFIG.dbu;
-        context.transformations = context.items.filter (function(item) { return item.type == "transformation"});
-        context.techniques = context.items.filter (function(item) { return item.type == "technique"});
-        context.gear = context.items.filter (function(item) { return item.type == "gear"});
+        context.config = CONFIG.physio;
+        context.gear_list = context.items.filter (function(item) { return item.type == "gear"});
+        context.body_parts = context.items.filter (function(item) { return item.type == "body_part"});
 
         return context;
     }
@@ -46,14 +45,28 @@ export class DBUActorSheet extends ActorSheet {
             }
             console.log(actor.items);
         })
+        .on('click', event_data, async function(event) {
+            var activeEl = document.activeElement;
+            if($(activeEl).attr('class') == "no-style-button") {
+                console.log(activeEl);
+                const roll = new Roll($(activeEl).attr('id')+'d6cs>2').evaluate({async: false});
+                roll.toMessage({
+                    rollMode: 'roll',
+                    speaker: {alias: name}
+                    });
+            }
+        })
+        
         
     }
 
     //when and Item is placed on the sheet
     //create logic to ensure certain things can't be duplicates eq transformations and techniques
+    /*
+    super not working rn but leave commented out until fixed wont add items to sheet otherwise
     _onDropItem() {
-        
+        super._onDropItem();
     }
-
+    */ 
 
 } 

@@ -1,6 +1,6 @@
 {
-    "id": "dbu",
-    "title": "Dragon Ball Universe",
+    "id": "physio",
+    "title": "Physio RPG",
     "description": "A module which allows connection of bluetooth adult toys to foundry",
     "version": "0.0.1",
     "compatibility": {
@@ -10,7 +10,7 @@
     },
     "authors": ["PrismaArchives"],
     "esmodules" : [
-        "dbu.mjs"
+        "physio.mjs"
     ], 
     "styles": [
         "styles/actor.css"
@@ -23,7 +23,7 @@
         }
     ],
     "primaryTokenAttribute": "resources.hp",
-    "secondaryTokenAttribute": "resources.ki"
+    "secondaryTokenAttribute": "resources.mana"
 
     
 }

@@ -2,56 +2,28 @@
     "Actor": {
         "types": ["character", "minion"],
         "templates": {
-            "size": {
-                "size":"medium"
-            },
-            "alignment": {
-                "alignment": "neutral"
-            },
-            "z-soul": {
-                "z-soul": "",
-                "karma": 5
-            },
+
             "attributes": {
-                "agility": 1,
-                "force": 1,
-                "tenacity": 1,
-                "scholarship": 1,
-                "insight": 1,
-                "magic": 1,
-                "personality": 1
+                "strength": 3,
+                "agility": 3,
+                "endurance": 3,
+                "mind": 3,
+                "magic": 0,
+                "luck": 3
             },
-            "race": {
-                "race": "",
-                "race_attribute_1": "",
-                "race_attribute_2": "",
-                "race_attribute_3": "",
-                "life_mod": 0,
-                "saving_throw": "",
-                "race_skill_rank": 0,
-                "subrace": ""
+            "species": {
+                "species": "",
+                "size": ""
             },
             "resources": {
                 "hp": {
-                    "value": 60,
-                    "max": 60
+                    "value": 10,
+                    "max": 10
                 },
-                
-                "ki": {
-                    "value": 50,
-                    "max": 50,
-                    "max_capacity": 20 
+                "mana": {
+                    "value": 0,
+                    "max": 0
                 }
-                
-            },
-            "power_level": {
-                "power_level": 1,
-                "base_tier_of_power": 1,
-                "tier_of_power": 1
-            },
-            "capacity": {
-                "haste": 0,
-                "might": 0
             },
             "skills": {
 
@@ -59,15 +31,13 @@
             
         },
         "character": {
-            "templates":["alignment","z-soul", "attributes","race", "resources", "power_level"]
-        },
-        "minion": {
-            "templates":["alignment","attributes","race","resources", "power_level"]
+            "templates":["alignment","attributes","species", "skills", "resources"]
         }
+
     },
 
     "Item": {
-        "types":["gear", "technique", "transformation", "talent"],
+        "types":["gear", "body_part"],
         "templates": {
 
             "stacks": {
@@ -81,29 +51,24 @@
         },
 
         "gear": {
-            "templates": [],
-            "grade": "low"
-            
+            "templates": []
         },
 
-        "technique": {
-            "name": "",
-            "type": "",
-            "foundation": "",
-            "tp": 0,
-            "ki": 0,
+        "body_part": {
+            "parent_part": "",
+            "child_parts": [],
             "description": "",
-            "advantages": [],
-            "disadvantages": []
+            "effect": "",
+            "eligible_part_types": [],
+            "size": ""
         },
 
-        "transformation": {
-            "stress_test": 0,
-            "category": "",
-            "tier_requirement": 0, 
-            "racial_requirement": "None"
-            
+        "magic_component": {
+            "component_type": "",
+            "": ""
         }
+
+
 
 
     }

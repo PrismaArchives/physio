@@ -1,4 +1,4 @@
-export default class DBUActor extends Actor {
+export default class PhysioActor extends Actor {
     
 
 }

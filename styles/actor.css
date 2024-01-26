@@ -21,7 +21,7 @@
     flex-grow: 0;
 }
 
-.img {
+.no-grow {
     flex-grow: 0;
 }
 
@@ -111,6 +111,25 @@ h4 {
 }
 
 
+.no_grow {
+    flex-grow: 0;
+}
 
+.item-class{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 430px;
+    flex-wrap: warp;
+}
 
+.no-style-button {
+  background-color: transparent !important; 
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: inherit !important;
+  font: inherit !important;
+  border-radius: 0 !important; 
+  appearance: none !important; 
+}
 

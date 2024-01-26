@@ -6,47 +6,20 @@
                 <div class="flexrow">
                     <input type="text" name="name" value="{{actor.name}}" class="name" placeholder="Name" id="name-input">
                     <div class="flexcol min-size slow-grow">
-                        <label>Power Level:</label>
-                        <input name="system.power_level" type="text" value = "{{actor.system.power_level}}" data-dtype="Number"/>
-                    </div>
-                    <div class="flexcol min-size slow-grow">
-                        <label>Race:</label>
-                        <select name="attr_race">
+                        <label>Species:</label>
+                        <select name="attr_species">
 
-                            {{#select actor.system.race}}
-                            {{#each config.races as |name type|}}
+                            {{#select actor.system.species}}
+                            {{#each config.species as |name type|}}
                             <option value="{{type}}">{{name}}</option>
                             {{/each}}
                             {{/select}}
 
                         </select>
-
-
-
-
-
                     </div>
                 </div>
-
+                
                 <div class="flexrow bio-div">
-                    {{#if (eq actor.type 'character')}}
-                    <div class="flexcol min-size slow-grow">
-                        
-                        <label>Karma:</label>
-                        <input name="system.karma" type="text" value = "{{actor.system.karma}}" data-dtype="Number"/>
-                    </div>
-                    {{/if}}
-                    <div class="flexcol min-size ">
-                        <label>Alignment:</label>
-                        <select name="system.alignment" value ="{{actor.system.alignment}}">
-                            {{#select actor.system.alignment}}
-                            {{#each config.alignments as |name type|}}
-                            <option value="{{type}}">{{name}}</option>
-                            {{/each}}
-                            {{/select}}
-                            
-                        </select>
-                    </div>
                     <div class="flexcol min-size">
                         <label>Size:</label>
                         <select name="system.size" value="{{actor.system.size}}">
@@ -56,10 +29,6 @@
                             {{/each}}
                             {{/select}}
                         </select>
-                    </div>
-                    <div class="flexcol min-size slow-grow">
-                        <label>Subrace:</label>
-                        <input type="text" name="system.subrace" value="{{actor.system.subrace}}">
                     </div>
                 </div>
             </div>
