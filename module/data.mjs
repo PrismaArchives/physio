@@ -1,45 +1,65 @@
 class CharacterData extends foundry.abstract.DataModel {
     static defineSchema() {
         const fields = foundry.data.fields;
+
+  
+
         return {
             attributes: new fields.SchemaField({
+                "strength": new fields.NumberField({
+                    required: true,
+                    initial: 3,
+                    integer: true
+                }),
                 "agility": new fields.NumberField({
                     required: true,
-                    initial: 1,
+                    initial: 3,
                     integer: true
                 }),
-                "force": new fields.NumberField({
+                "endurance": new fields.NumberField({
                     required: true,
-                    initial: 1,
+                    initial: 3,
                     integer: true
                 }),
-                "tenacity": new fields.NumberField({
+                "perception": new fields.NumberField({
                     required: true,
-                    initial: 1,
+                    initial: 3,
                     integer: true
                 }),
-                "scholarship": new fields.NumberField({
+                "ego": new fields.NumberField({
                     required: true,
-                    initial: 1,
-                    integer: true
-                }),
-                "insight": new fields.NumberField({
-                    required: true,
-                    initial: 1,
+                    initial: 3,
                     integer: true
                 }),
                 "magic": new fields.NumberField({
-                    required: true,
-                    initial: 1,
+                    required: false,
+                    initial: 0,
                     integer: true
                 }),
-                "personality": new fields.NumberField({
-                    required: true,
-                    initial: 1,
+                "luck": new fields.NumberField({
+                    required: false,
+                    initial: 3,
                     integer: true
                 })
             }),
-            ki: new fields.SchemaField({
+            hp: new fields.SchemaField({
+                value: new fields.NumberField({
+                    required: true,
+                    initial: (this.strength+this.endurance)*2,
+                    integer: true
+                }),
+                min: new fields.NumberField({
+                    required: true,
+                    initial: 0,
+                    integer: true
+                }),
+                max_capacity: new fields.NumberField({
+                    required: true,
+                    initial: 20,
+                    integer: true
+                })
+            }),
+            mana: new fields.SchemaField({
                 value: new fields.NumberField({
                     required: true,
                     initial: 50,

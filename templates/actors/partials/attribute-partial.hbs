@@ -1,4 +1,5 @@
 <div name="attribute-section" class="flexcol" id="attributes-section">
+     
      <label><h2>Attributes</h2></label>
      <div class="attribute-square groove-bordered">
         <label><button type="button" class="no-style-button" id="{{actor.system.strength}}">Strength</button></label>
@@ -12,7 +13,14 @@
         <label><button type="button" class="no-style-button" id="{{actor.system.endurance}}">Endurance</button></label>
         <input name="system.endurance" type="text" value = "{{actor.system.endurance}}" data-dtype="Number"/>
     </div>
-
+    <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button" id="{{actor.system.will}}">Will</button></label>
+        <input name="system.will" type="text" value = "{{actor.system.will}}" data-dtype="Number"/>
+    </div>
+    <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button" id="{{actor.system.perception}}">Awareness</button></label>
+        <input name="system.Awareness" type="text" value = "{{actor.system.Awareness}}" data-dtype="Number"/>
+    </div>
     {{! Optional Stats }}
     <!--
     <div class="attribute-square groove-bordered">
@@ -24,5 +32,12 @@
         <input name="system.luck" type="text" value = "{{actor.system.luck}}" data-dtype="Number"/>
     </div>
     -->
+    
+  
+    
+
+
+
+
 </div>
 

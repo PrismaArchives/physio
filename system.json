@@ -22,6 +22,7 @@
             "path": "lang/en.json"
         }
     ],
+    "initiative": "@agility",
     "primaryTokenAttribute": "resources.hp",
     "secondaryTokenAttribute": "resources.mana"
 

@@ -6,7 +6,8 @@ physio.attributes = {
     "strength": "Strength",
     "agility": "Agility",
     "endurance": "Endurance",
-    "mind": "Mind",
+    "awareness": "Awareness",
+    "will": "Will",
     "magic": "Magic",
     "luck": "Luck"
 }
@@ -29,4 +30,9 @@ physio.parts = {
     arm: "Arm",
     leg: "Leg",
     torso: "Torso"
+}
+
+
+physio.conditions = {
+    
 }

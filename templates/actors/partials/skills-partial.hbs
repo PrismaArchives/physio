@@ -1,3 +1,25 @@
 <div name="skill-section" class="flexcol" id="skill-section">
-    <label><h2>Skills:</h2></label>
+     <label><h2>Skills</h2></label>
+     <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button skill" id="{{actor.system.athletics.value}}" data-parent-attribute="{{actor.system.athletics.attribute}}">Athletics</button></label>
+        <input name="system.athletics.value" type="text" value ="{{actor.system.athletics.value}}" data-dtype="Number"/>
+    </div>
+     <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button skill" id="{{actor.system.dodge.value}}" data-parent-attribute="{{actor.system.dodge.attribute}}">Dodge</button></label>
+        <input name="system.dodge.value" type="text" value ="{{actor.system.dodge.value}}" data-dtype="Number"/>
+    </div>
+     <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button skill" id="{{actor.system.tracking.value}}" data-parent-attribute="{{actor.system.tracking.attribute}}">Tracking</button></label>
+        <input name="system.tracking.value" type="text" value ="{{actor.system.tracking.value}}" data-dtype="Number"/>
+    </div>
+     <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button skill" id="{{actor.system.sleight_of_hand.value}}" data-parent-attribute="{{actor.system.sleight_of_hand.attribute}}">Sleight Of Hand</button></label>
+        <input name="system.sleight_of_hand.value" type="text" value ="{{actor.system.sleight_of_hand.value}}" data-dtype="Number"/>
+    </div>
+     <div class="attribute-square groove-bordered">
+        <label><button type="button" class="no-style-button skill" id="{{actor.system.stealth.value}}" data-parent-attribute="{{actor.system.stealth.attribute}}">Stealth</button></label>
+        <input name="system.stealth.value" type="text" value ="{{actor.system.stealth.value}}" data-dtype="Number"/>
+    </div>
+
+
 </div>

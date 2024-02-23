@@ -46,10 +46,21 @@ export class PhysioActorSheet extends ActorSheet {
             console.log(actor.items);
         })
         .on('click', event_data, async function(event) {
+            var actor = event.data.actor;
             var activeEl = document.activeElement;
-            if($(activeEl).attr('class') == "no-style-button") {
+            if($(activeEl).hasClass('no-style-button')) {
                 console.log(activeEl);
-                const roll = new Roll($(activeEl).attr('id')+'d6cs>2').evaluate({async: false});
+                var diceTotal = parseInt($(activeEl).attr('id'));
+                console.log(diceTotal)
+                if($(activeEl).hasClass('skill')) {
+
+                    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation
+                    var attribute_name = $(activeEl).attr('data-parent-attribute');
+                    diceTotal += parseInt(actor.system[attribute_name]);
+                }
+
+                console.log(diceTotal)
+                const roll = new Roll( String(diceTotal) + "d10cs>3")
                 roll.toMessage({
                     rollMode: 'roll',
                     speaker: {alias: name}

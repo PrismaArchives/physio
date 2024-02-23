@@ -7,7 +7,9 @@
                 "strength": 3,
                 "agility": 3,
                 "endurance": 3,
-                "mind": 3,
+                "will": 3,
+                "awareness": 3,
+                "ego": 3,
                 "magic": 0,
                 "luck": 3
             },
@@ -17,8 +19,8 @@
             },
             "resources": {
                 "hp": {
-                    "value": 10,
-                    "max": 10
+                    "value": 12,
+                    "max": 12
                 },
                 "mana": {
                     "value": 0,
@@ -26,6 +28,46 @@
                 }
             },
             "skills": {
+                "athletics": {
+                    "name": "athletics",
+                    "value": 0,
+                    "attribute" : "strength"
+                },
+                "dodge": {
+                    "name": "dodge",
+                    "value": 0,
+                    "attribute" : "agility"
+                },
+                "tracking": {
+                    "name": "tracking",
+                    "value": 0,
+                    "attribute" : "awareness"
+                },
+                "sleight_of_hand": {
+                    "name": "sleight_of_hand",
+                    "value": 0,
+                    "attribute" : "agility"
+                },
+                "stealth": {
+                    "name": "stealth",
+                    "value": 0,
+                    "attribute" : "agility"
+                },
+                "zx": {
+                    "name": "dodge",
+                    "value": 0,
+                    "attribute" : "agility"
+                },
+                "re": {
+                    "name": "dodge",
+                    "value": 0,
+                    "attribute" : "agility"
+                },
+                "reas": {
+                    "name": "dodge",
+                    "value": 0,
+                    "attribute" : "agility"
+                }
 
             }
             
@@ -37,36 +79,38 @@
     },
 
     "Item": {
-        "types":["gear", "body_part"],
+        "types":["gear", "body_part", "trait"],
         "templates": {
 
-            "stacks": {
-                "value": 1,
-                "max": 1
+            "weapon": {
+                "damage_rank": 0
+            },
+
+            "magic_component": {
+                "quality": 0,
+                "quantity": 0
             }
-
-
-
 
         },
 
         "gear": {
-            "templates": []
+            "templates": ["magic_component", "weapon"]
         },
 
         "body_part": {
+            "templates": ["magic_component", "weapon"],
             "parent_part": "",
             "child_parts": [],
+            "part_types": "",
             "description": "",
             "effect": "",
             "eligible_part_types": [],
             "size": ""
-        },
-
-        "magic_component": {
-            "component_type": "",
-            "": ""
         }
+
+        
+
+        
 
 
 
